@@ -1,11 +1,14 @@
 from flask import Flask
 
+from config import DebugConfig
+
 app = Flask(__name__)
+app.config.from_object(DebugConfig)
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!alkd 哥斯达黎加'
+def index():
+    return 'Hello World!alkd 哥斯达黎加slkjaf;ldjf'
 
 
 if __name__ == '__main__':
